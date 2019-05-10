@@ -120,7 +120,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-zooAnimals.forEach(function(element){
+zooAnimals.forEach((element) => {
   animalNames.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`)
 })
 console.log(animalNames);
@@ -132,7 +132,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = []; //if this weren't const I'd = it to next line
-zooAnimals.map(function(element){
+zooAnimals.map((element) => {
   lowerCase.push(element.animal_name.toLowerCase()) //with a return statement here
 })
 console.log(lowerCase); 
@@ -149,7 +149,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
-zooAnimals.filter(function(element){
+zooAnimals.filter((element) => {
   if(element.population < 5){
       largerPopulation.push(element)
   }
@@ -157,7 +157,7 @@ zooAnimals.filter(function(element){
 console.log(largerPopulation); //can't assign a new array to a const array, can only push to it
 
                       // let largerPopulation = [];
-                      // largerPopulation = zooAnimals.filter(function(element){
+                      // largerPopulation = zooAnimals.filter((element) => {
                       //   return element.population < 5;
                       // })
                       // console.log(largerPopulation);
@@ -168,7 +168,7 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 let populationTotal = 0;
-populationTotal = zooAnimals.reduce(function(accumulator, element){
+populationTotal = zooAnimals.reduce((accumulator, element) => {
   return accumulator + element.population;
 }, 0)
 console.log(populationTotal);
@@ -176,7 +176,7 @@ console.log(populationTotal);
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
+CHECKKKKKKK
 */
 
 
